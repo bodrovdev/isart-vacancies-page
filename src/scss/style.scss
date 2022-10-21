@@ -14,6 +14,8 @@
 @use 'base/base-par';
 @use 'base/base-button';
 
+@use 'base/visually-hidden';
+
 //Глобальные стили
 @use 'global/scaffolding';
 @use 'global/fonts';
@@ -22,3 +24,7 @@
 @use 'blocks/page-header';
 @use 'blocks/page-content';
 @use 'blocks/page-footer';
+@use 'blocks/career';
+@use 'blocks/vacancies';
+@use 'blocks/motto';
+@use 'blocks/form';

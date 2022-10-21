@@ -1,0 +1,34 @@
+@use "../mixins";
+
+.motto {
+  margin: 0 0 90px 0;
+
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--color-black);
+  }
+
+  &__yellow {
+    display: inline-block;
+
+    background-color: var(--color-canary);
+  }
+
+  &__purple {
+    display: inline-block;
+
+    background-color: var(--color-electric-violet);
+
+    color: var(--color-white);
+  }
+}

@@ -1,21 +1,124 @@
-<!DOCTYPE html>
-<html lang="ru">
+@@include('components/base-blocks/_base-header.html')
+<main class="page-content">
+	<section class="career">
+		<div class="career__container base-container">
+			<div class="career__column">
+				<div class="career__column-description">
+					<h1>Карьера</h1>
+					<p>
+						Именно от профессионализма, сплоченности и целеустремленности команды зависит успешность бизнеса. Поэтому мы
+						заинтересованы в сотрудничестве с квалифицированными специалистами, имеющими знания и профессиональный опыт,
+						творческий потенциал и высокую мотивацию к труду и собственному развитию.
+					</p>
+				</div>
+				<div class="career__column-features">
+					<h3>Мы гарантируем</h3>
+					<ul>
+						<li>Строгое соблюдение всех норм Трудового кодекса;</li>
+						<li>Необходимые условия для самореализации;</li>
+						<li>Конкурентоспособный компенсационный пакет;</li>
+						<li>Стабильность, надежность и уверенность в завтрашнем дне;</li>
+						<li>Социальные программы и поддержку.</li>
+					</ul>
+				</div>
+			</div>
+			<div class="career__column career__column--right">
+				<picture>
+					<source type="image/webp"
+						srcset="img/image/content/career-graphic.webp 1x, img/image/content/career-graphic@2x.webp 2x">
+					<source type="image/png"
+						srcset="img/image/content/career-graphic.png 1x, img/image/content/career-graphic@2x.png 2x">
+					<img class="career__graphic-img" src="img/image/content/career-graphic.png" alt="#">
+				</picture>
+			</div>
+		</div>
+	</section>
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="format-detection" content="date=no">
-	<meta name="format-detection" content="address=no">
-	<meta name="format-detection" content="email=no">
+	<section class="vacancies">
+		<div class="vacancies__container base-container">
+			<a class="vacancies__item base-link" href="#">
+				<h3>PR / SMM специалист</h3>
+				<p>
+					Именно от профессионализма,
+					сплоченности и целеустремленности команды зависит
+					успешность бизнеса.
+				</p>
+				<div class="vacancies__item-details">
+					<span class="vacancies__details-text">Подробнее</span>
+					<svg class="vacancies__details-icon" width="40" height="16" alt="#">
+						<use href="img/icon/sprite.svg#arrow-icon"></use>
+					</svg>
+				</div>
+			</a>
+			<a class="vacancies__item base-link" href="#">
+				<h3>PR / SMM специалист</h3>
+				<p>
+					Именно от профессионализма,
+					сплоченности и целеустремленности команды зависит
+					успешность бизнеса.
+				</p>
+				<div class="vacancies__item-details">
+					<span class="vacancies__details-text">Подробнее</span>
+					<svg class="vacancies__details-icon" width="40" height="16" alt="#">
+						<use href="img/icon/sprite.svg#arrow-icon"></use>
+					</svg>
+				</div>
+			</a>
+		</div>
+	</section>
 
-	<link href="css/style.min.css" rel="stylesheet">
-	<title></title>
-</head>
+	<section class="motto">
+		<div class="motto__container base-container">
+			<p class="motto__text base-par">
+				Не бойся новых <span class="motto__yellow">сложных задач</span> – твой ближний круг создаст для тебя опору.
+				На невозможное нужно чуть больше <span class="motto__purple">времени.</span>
+			</p>
+		</div>
+	</section>
 
-<body>
-	<script src="js/index.min.js"></script>
-</body>
-
-</html>
+	<section class="form">
+		<div class="form__container base-container">
+			<h2 class="form__title base-title">Напиши нам</h2>
+			<form class="form__body" id="vacancies_callback_form" name="vacancies_callback_form">
+				<div class="form__body-row">
+					<label class="form__formset">
+						<span class="form__formset-text">Привет, меня зовут</span>
+						<input class="form__formset-input form__formset-input--one" type="text" name="vacancies_callback_name">
+					</label>
+					<label class="form__formset">
+						<span class="form__formset-text">Я претендую на вакансию</span>
+						<input class="form__formset-input form__formset-input--two" type="text" name="vacancies_callback_job">
+					</label>
+				</div>
+				<div class="form__body-row">
+					<label class="form__formset">
+						<span class="form__formset-text">Со мной можно связаться по номеру</span>
+						<input class="form__formset-input form__formset-input--three" type="tel" name="vacancies_callback_phone">
+					</label>
+					<label class="form__formset">
+						<span class="form__formset-text">или отправить мне на почту письмо</span>
+						<input class="form__formset-input form__formset-input--four" type="email" name="vacancies_callback_email">
+					</label>
+				</div>
+				<div class="form__body-row">
+					<label class="form__formset">
+						<span class="form__formset-text">Я хочу работать в вашей команде потому что</span>
+						<input class="form__formset-input form__formset-input--five" type="text" name="vacancies_callback_message">
+					</label>
+				</div>
+				<div class="form__body-row">
+					<label class="form__formset">
+						<span class="form__formset-text">Здесь я <span id="form_file_loader">прикрепляю файл</span> своего резюме
+							и<br>
+							оставлю ссылку на свое
+							портфолио</span>
+						<input class="form__formset-input form__formset-input--six" type="text" name="vacancies_callback_portfolio">
+					</label>
+					<button class="form__submit base-button" type="submit">Отправить</button>
+					<input class="form__formset-input visually-hidden" type="file" name="vacancies_callback_file">
+				</div>
+			</form>
+		</div>
+	</section>
+</main>
+@@include('components/base-blocks/_base-footer.html')
