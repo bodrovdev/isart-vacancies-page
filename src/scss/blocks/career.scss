@@ -58,12 +58,7 @@
       margin: 0 0 30px 0;
     }
 
-    & h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    & h1 {
       font-weight: 700;
       font-size: 60px;
       line-height: 73px;
@@ -126,12 +121,7 @@
 
   &__column-features {
 
-    & h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    & h2 {
       font-weight: 700;
       font-size: 23px;
       line-height: 28px;
@@ -155,8 +145,7 @@
       }
     }
 
-    & ul,
-    ol {
+    & ul {
       list-style: none;
 
       padding: 0;
