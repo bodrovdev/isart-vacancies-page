@@ -4,6 +4,14 @@
 
   margin: 0 0 115px 0;
 
+  @include mixins.respond-to(mobileOnly) {
+    margin: 0 0 50px 0;
+  }
+
+  @include mixins.respond-to(tabletOnly) {
+    margin: 0 0 50px 0;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -18,11 +26,25 @@
     color: var(--color-black);
 
     margin: 0 0 30px 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 30px;
+      line-height: 1.2;
+    }
   }
 
   &__body {
     display: flex;
     flex-direction: column;
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+    }
   }
 
   &__body-row {
@@ -37,15 +59,41 @@
       align-items: center;
 
       margin: 0;
+
+      @include mixins.respond-to(tablet) {
+        align-items: flex-end;
+      }
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
+
+    @include mixins.respond-to(tablet) {
+      flex-direction: row;
     }
   }
 
   &__formset {
     display: flex;
-    align-items: baseline;
     flex-wrap: nowrap;
 
     margin: 0 20px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+
+      margin: 0 0 50px 0;
+    }
+
+    @include mixins.respond-to(tablet) {
+      flex-direction: row;
+      align-items: flex-end;
+    }
 
     &:last-child {
       margin: 0;
@@ -61,6 +109,35 @@
     cursor: pointer;
 
     margin: 0 20px 0 0;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+      line-height: 1.2;
+
+      margin: 0;
+
+      & br {
+        display: none;
+      }
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 16px;
+      line-height: 1.2;
+
+      margin: 0;
+
+      & br {
+        display: none;
+      }
+    }
+  }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1149px) {
+    &__formset-text {
+      font-size: 14px;
+      line-height: 1.2;
+    }
   }
 
   &__formset-field {
@@ -74,6 +151,14 @@
     &:last-child {
       margin: 0;
     }
+
+    @include mixins.respond-to(mobileOnly) {
+      width: 100%;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      width: 100%;
+    }
   }
 
   &__formset-input {
@@ -85,6 +170,16 @@
     font-size: 24px;
     line-height: 29px;
     color: var(--color-electric-violet);
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
 
     &--one {
       width: 360px;
@@ -98,12 +193,32 @@
       width: 162px;
 
       font-size: 22px;
+
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 16px;
+        line-height: 1.2;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        font-size: 16px;
+        line-height: 1.2;
+      }
     }
 
     &--four {
       width: 162px;
 
       font-size: 22px;
+
+      @include mixins.respond-to(mobileOnly) {
+        font-size: 16px;
+        line-height: 1.2;
+      }
+
+      @include mixins.respond-to(tabletOnly) {
+        font-size: 16px;
+        line-height: 1.2;
+      }
     }
 
     &--five {
@@ -124,12 +239,15 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
+    color: var(--color-silver-chalice);
+
+    @include mixins.respond-to(tablet) {
+      white-space: nowrap;
+    }
   }
 
   &__file-loader {
     position: relative;
-
-    // display: inline-block;
 
     cursor: pointer;
     text-decoration: underline;
@@ -153,6 +271,23 @@
 
     background-color: var(--color-canary);
     border-radius: 15px;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1149px) {
+    &__file-name {
+      font-size: 14px;
+      line-height: 1.2;
+    }
   }
 
   &__submit {
@@ -175,6 +310,18 @@
     margin: 0 0 0 auto;
 
     z-index: 10;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+
+      margin: 0;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 16px;
+
+      margin: 0;
+    }
 
     &::before {
       content: "";
@@ -204,5 +351,31 @@
 
       transition: left 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
     }
+  }
+}
+
+@include mixins.respond-to(mobileOnly) {
+
+  .form__formset-input--one,
+  .form__formset-input--two,
+  .form__formset-input--three,
+  .form__formset-input--four,
+  .form__formset-input--five,
+  .form__formset-input--six {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@include mixins.respond-to(tabletOnly) {
+
+  .form__formset-input--one,
+  .form__formset-input--two,
+  .form__formset-input--three,
+  .form__formset-input--four,
+  .form__formset-input--five,
+  .form__formset-input--six {
+    width: 100%;
+    max-width: 100%;
   }
 }

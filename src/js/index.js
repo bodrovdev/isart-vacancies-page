@@ -19,3 +19,9 @@ hidden_file_loader.addEventListener('change', (e) => {
     file_name.textContent = `(${file.name.slice(0, 3)}...${file.name.slice(-7, file.name.length)})`;
   }
 })
+
+let one = document.getElementById('test');
+
+one.addEventListener('change', (e) => {
+  console.log(e.target);
+})

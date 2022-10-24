@@ -3,7 +3,6 @@
 .motto {
   margin: 0 0 90px 0;
 
-
   &__container {
     display: flex;
     align-items: center;
@@ -16,6 +15,19 @@
     line-height: 130%;
     text-align: center;
     color: var(--color-black);
+
+    @include mixins.respond-to(mobileOnly) {
+      display: inline-block;
+
+      max-width: 100%;
+
+      font-size: 30px;
+      line-height: 1.2;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 40px;
+    }
   }
 
   &__yellow {

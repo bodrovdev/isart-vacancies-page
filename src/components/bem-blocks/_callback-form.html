@@ -1,0 +1,62 @@
+<section class="form">
+  <div class="form__container base-container">
+    <h2 class="form__title base-title">Напиши нам</h2>
+    <form class="form__body" id="vacancies_callback_form" name="vacancies_callback_form">
+      <div class="form__body-row">
+        <label class="form__formset">
+          <span class="form__formset-text">Привет, меня зовут</span>
+          <div class="form__formset-field">
+            <input class="form__formset-input form__formset-input--one" id="test" type="text"
+              name="vacancies_callback_name">
+            <span class="form__formset-underline">Имя, Фамилия</span>
+          </div>
+        </label>
+        <label class="form__formset">
+          <span class="form__formset-text">Я претендую на вакансию</span>
+          <div class="form__formset-field">
+            <input class="form__formset-input form__formset-input--two" type="text" name="vacancies_callback_job">
+            <span class="form__formset-underline">Название вакансии</span>
+          </div>
+        </label>
+      </div>
+      <div class="form__body-row">
+        <label class="form__formset">
+          <span class="form__formset-text">Со мной можно связаться по номеру</span>
+          <div class="form__formset-field">
+            <input class="form__formset-input form__formset-input--three" type="tel" name="vacancies_callback_phone">
+            <span class="form__formset-underline">Телефон</span>
+          </div>
+        </label>
+        <label class="form__formset">
+          <span class="form__formset-text">или отправить мне на почту письмо</span>
+          <div class="form__formset-field">
+            <input class="form__formset-input form__formset-input--four" type="email" name="vacancies_callback_email">
+            <span class="form__formset-underline">Почта</span>
+          </div>
+        </label>
+      </div>
+      <div class="form__body-row">
+        <label class="form__formset">
+          <span class="form__formset-text">Я хочу работать в вашей команде потому что</span>
+          <div class="form__formset-field">
+            <input class="form__formset-input form__formset-input--five" type="text" name="vacancies_callback_message">
+            <span class="form__formset-underline">Причина</span>
+          </div>
+        </label>
+      </div>
+      <div class="form__body-row">
+        <label class="form__formset">
+          <span class="form__formset-text">
+            Здесь я <span class="form__file-loader" id="form_file_loader">
+              прикрепляю файл</span> <span class="form__file-name" id="form_file_name"></span> своего резюме<br>
+            и оставляю ссылку на своё портфолио
+          </span>
+          <input class="form__formset-input form__formset-input--six" type="text" name="vacancies_callback_portfolio">
+        </label>
+        <button class="form__submit base-button" type="submit">Отправить</button>
+        <input class="form__formset-input visually-hidden" type="file" id="form_hidden_file_loader"
+          name="vacancies_callback_file">
+      </div>
+    </form>
+  </div>
+</section>
