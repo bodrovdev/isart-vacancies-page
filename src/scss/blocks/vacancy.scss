@@ -208,14 +208,10 @@
         width: 3px;
         height: 3px;
         background-color: var(--color-black);
+        border-radius: 50%;
 
         @include mixins.respond-to(mobileOnly) {
-          top: 50%;
-          transform: translateY(-50%);
-
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
+          top: 8px;
         }
       }
 
@@ -288,14 +284,10 @@
         width: 3px;
         height: 3px;
         background-color: var(--color-black);
+        border-radius: 50%;
 
         @include mixins.respond-to(mobileOnly) {
-          top: 50%;
-          transform: translateY(-50%);
-
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
+          top: 8px;
         }
 
         @include mixins.respond-to(tabletOnly) {
@@ -368,14 +360,10 @@
         width: 3px;
         height: 3px;
         background-color: var(--color-black);
+        border-radius: 50%;
 
         @include mixins.respond-to(mobileOnly) {
-          top: 50%;
-          transform: translateY(-50%);
-
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
+          top: 8px;
         }
 
         @include mixins.respond-to(tabletOnly) {
@@ -504,6 +492,8 @@
     overflow: hidden;
     cursor: pointer;
 
+    transition: outline 0.1s;
+
     padding: 24px 16px 24px 16px;
 
     &::before {
@@ -556,6 +546,13 @@
     transition: left 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
   }
 
+  &__footer-button:focus-visible {
+    outline: 3px solid var(--color-green);
+    outline-offset: 5px;
+
+    transition: outline 0.1s;
+  }
+
   &__button-label {
     position: absolute;
     left: 0;
@@ -605,7 +602,7 @@
     line-height: 24px;
     color: var(--color-black);
 
-    transition: color 0.5s;
+    transition: color outline 0.5s;
 
     margin: 0 0 0 auto;
 
@@ -635,6 +632,13 @@
     &:hover::before {
       transform: scale(1);
       transition: transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    &:focus-visible {
+      outline: 3px solid var(--color-green);
+      outline-offset: 5px;
+
+      transition: outline 0.1s;
     }
 
     @include mixins.respond-to(mobileOnly) {

@@ -101,6 +101,8 @@
   }
 
   &__formset-text {
+    display: inline-block;
+
     font-weight: 400;
     font-size: 24px;
     line-height: 29px;
@@ -256,8 +258,6 @@
   }
 
   &__file-loader {
-    position: relative;
-
     cursor: pointer;
 
     font-family: var(--font-family-default);

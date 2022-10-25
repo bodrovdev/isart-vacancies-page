@@ -12,11 +12,11 @@ hidden_file_loader.addEventListener('change', (e) => {
   const [file] = e.target.files;
 
   if (file.name.length < 20) {
-    file_name.textContent = `(${file.name})`;
+    file_name.textContent = ` (${file.name}) `;
   }
 
   else {
-    file_name.textContent = `(${file.name.slice(0, 3)}...${file.name.slice(-7, file.name.length)})`;
+    file_name.textContent = ` (${file.name.slice(0, 3)}...${file.name.slice(-7, file.name.length)}) `;
   }
 })
 
