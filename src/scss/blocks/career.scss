@@ -165,13 +165,21 @@
       &:before {
         content: "";
         position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
+        top: 10px;
         left: 0;
 
         width: 3px;
         height: 3px;
         background-color: var(--color-black);
+        border-radius: 50%;
+
+        @include mixins.respond-to(mobileOnly) {
+          top: 8px;
+        }
+
+        @include mixins.respond-to(tabletOnly) {
+          top: 8px;
+        }
       }
 
       @include mixins.respond-to(mobileOnly) {
