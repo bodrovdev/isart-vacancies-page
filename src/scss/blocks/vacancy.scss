@@ -202,7 +202,7 @@
       &:before {
         content: "";
         position: absolute;
-        top: 14px;
+        top: 11px;
         left: 0;
 
         width: 3px;
@@ -211,6 +211,10 @@
         border-radius: 50%;
 
         @include mixins.respond-to(mobileOnly) {
+          top: 9px;
+        }
+
+        @include mixins.respond-to(tabletOnly) {
           top: 8px;
         }
       }
@@ -278,7 +282,7 @@
       &:before {
         content: "";
         position: absolute;
-        top: 14px;
+        top: 10px;
         left: 0;
 
         width: 3px;
@@ -291,12 +295,7 @@
         }
 
         @include mixins.respond-to(tabletOnly) {
-          top: 50%;
-          transform: translateY(-50%);
-
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
+          top: 8px;
         }
       }
 
@@ -354,7 +353,7 @@
       &:before {
         content: "";
         position: absolute;
-        top: 14px;
+        top: 11px;
         left: 0;
 
         width: 3px;
@@ -367,12 +366,7 @@
         }
 
         @include mixins.respond-to(tabletOnly) {
-          top: 50%;
-          transform: translateY(-50%);
-
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
+          top: 8px;
         }
       }
 
