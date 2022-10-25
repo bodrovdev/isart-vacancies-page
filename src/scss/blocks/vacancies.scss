@@ -53,18 +53,13 @@
       width: 320px;
     }
 
-    & h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
+    h2 {
       font-weight: 700;
       font-size: 27px;
       line-height: 33px;
       color: var(--color-black);
 
-      transition: all 0.1s;
+      transition: color outline 0.1s;
 
       padding: 0;
       margin: 0 0 5px 0;
@@ -96,13 +91,7 @@
 
     @include mixins.respond-to(desktopS) {
       &:hover {
-
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        h2 {
           color: var(--color-green);
 
           transition: color 0.1s;
@@ -111,17 +100,18 @@
     }
 
     &:active {
-
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
+      h2 {
         color: var(--color-green);
 
         transition: color 0.1s;
       }
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-green);
+      outline-offset: 5px;
+
+      transition: outline 0.1s;
     }
   }
 

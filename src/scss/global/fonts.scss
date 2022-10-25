@@ -1,6 +1,5 @@
 @use "../mixins";
 
-@include mixins.font-face(Arial, normal, 400);
 @include mixins.font-face(Montserrat, normal, 400);
 @include mixins.font-face(Montserrat, normal, 700);
-@include mixins.font-face(Inter, normal, 700);
+@include mixins.font-face(Inter, normal, 400);

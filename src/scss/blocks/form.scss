@@ -108,13 +108,13 @@
 
     cursor: pointer;
 
-    margin: 0 20px 0 0;
+    margin: 0 9px 0 0;
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 16px;
       line-height: 1.2;
 
-      margin: 0;
+      margin: 0 0 10px 0;
 
       & br {
         display: none;
@@ -170,6 +170,8 @@
     font-size: 24px;
     line-height: 29px;
     color: var(--color-electric-violet);
+
+    transition: outline 0.1s;
 
     @include mixins.respond-to(mobileOnly) {
       font-size: 16px;
@@ -228,6 +230,12 @@
     &--six {
       width: 400px;
     }
+
+    &:focus-visible {
+      border-bottom: 2px solid var(--color-green);
+
+      transition: border-bottom 0.1s;
+    }
   }
 
   &__formset-underline {
@@ -240,6 +248,7 @@
     font-size: 14px;
     line-height: 17px;
     color: var(--color-silver-chalice);
+    white-space: nowrap;
 
     @include mixins.respond-to(tablet) {
       white-space: nowrap;
@@ -250,16 +259,45 @@
     position: relative;
 
     cursor: pointer;
-    text-decoration: underline;
-    color: var(--color-electric-violet);
 
-    transition: color background-color 0.3s;
+    font-family: var(--font-family-default);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: var(--color-electric-violet);
+    text-decoration: underline;
+
+    transition: color background-color outline 0.3s;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+
+    @include mixins.respond-to(tabletOnly) {
+      font-size: 16px;
+      line-height: 1.2;
+    }
 
     &:hover {
       color: var(--color-white);
       background-color: var(--color-electric-violet);
 
       transition: color background-color 0.3s;
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-green);
+      outline-offset: 1px;
+
+      transition: outline 0.1s;
+    }
+  }
+
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1149px) {
+    &__file-loader {
+      font-size: 14px;
+      line-height: 1.2;
     }
   }
 
@@ -305,7 +343,7 @@
     color: var(--color-black);
     cursor: pointer;
 
-    transition: color 0.5s;
+    transition: color outline 0.5s;
 
     margin: 0 0 0 auto;
 
@@ -350,6 +388,13 @@
       left: 0;
 
       transition: left 0.6s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+    }
+
+    &:focus-visible {
+      outline: 5px solid var(--color-green);
+      outline-offset: 5px;
+
+      transition: outline 0.1s;
     }
   }
 }
