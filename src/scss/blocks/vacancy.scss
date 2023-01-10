@@ -16,7 +16,7 @@
     display: flex;
     justify-content: space-between;
 
-    margin: 0 0 63px 0;
+    margin: 0 0 100px 0;
 
     @include mixins.respond-to(mobileOnly) {
       margin: 0 0 26px 0;
@@ -94,6 +94,8 @@
   }
 
   &__graphic-img {
+    position: sticky;
+
     @include mixins.respond-to(mobileOnly) {
       width: 100%;
       height: auto;
@@ -414,7 +416,7 @@
     }
   }
 
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1287px) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1279px) {
     &__footer {
       flex-direction: column;
       align-items: flex-start;
@@ -423,10 +425,10 @@
     }
   }
 
-  @media only screen and (min-device-width: 1288px) {
+  @media only screen and (min-device-width: 1280px) {
     &__footer {
       flex-direction: row;
-      align-items: flex-end;
+      align-items: center;
 
       height: 70px;
     }
@@ -452,7 +454,7 @@
     }
   }
 
-  @media only screen and (min-device-width: 1024px) and (max-device-width: 1287px) {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1279px) {
     &__button-wrapper {
       margin: 0 0 40px 0;
 
@@ -462,7 +464,7 @@
     }
   }
 
-  @media only screen and (min-device-width: 1288px) {
+  @media only screen and (min-device-width: 1280px) {
     &__button-wrapper {
       margin: 0 15px 0 0;
 
@@ -660,5 +662,10 @@
     &__hh-link {
       position: relative;
     }
+  }
+
+  &__column-wrapper {
+    position: sticky;
+    top: 10px;
   }
 }
