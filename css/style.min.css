@@ -840,7 +840,7 @@ body {
 .vacancy__body {
   display: flex;
   justify-content: space-between;
-  margin: 0 0 63px
+  margin: 0 0 100px
 }
 .vacancy__column--right {
   padding: 35px 0 0
@@ -889,6 +889,10 @@ body {
 }
 .vacancy__column-graphic {
   display: none
+}
+.vacancy__graphic-img {
+  position: -webkit-sticky;
+  position: sticky
 }
 @media only screen and (min-width:0) and (max-width:767px) {
   .vacancy__column-pricerange {
@@ -1116,9 +1120,6 @@ body {
   position: relative;
   display: flex
 }
-.vacancy__button-wrapper {
-  position: relative
-}
 @media only screen and (min-width:0) and (max-width:767px) {
   .vacancy__conditions li:before {
     top: 8px
@@ -1141,9 +1142,6 @@ body {
   }
   .vacancy__button-wrapper:last-of-type {
     margin: 0
-  }
-  .vacancy__button-label {
-    bottom: -25px
   }
 }
 @media only screen and (min-width:768px) and (max-width:1023px) {
@@ -1169,11 +1167,11 @@ body {
   .vacancy__button-wrapper:last-of-type {
     margin: 0
   }
-  .vacancy__button-label {
-    bottom: -25px
-  }
 }
-@media only screen and (min-device-width:1024px) and (max-device-width:1287px) {
+.vacancy__button-wrapper {
+  position: relative
+}
+@media only screen and (min-device-width:1024px) and (max-device-width:1279px) {
   .vacancy__footer {
     flex-direction: column;
     align-items: flex-start;
@@ -1185,14 +1183,11 @@ body {
   .vacancy__button-wrapper:last-of-type {
     margin: 0
   }
-  .vacancy__button-label {
-    bottom: -25px
-  }
 }
-@media only screen and (min-device-width:1288px) {
+@media only screen and (min-device-width:1280px) {
   .vacancy__footer {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     height: 70px
   }
   .vacancy__button-wrapper {
@@ -1315,11 +1310,17 @@ body {
   transition: outline .1s
 }
 @media only screen and (min-width:0) and (max-width:767px) {
+  .vacancy__button-label {
+    bottom: -25px
+  }
   .vacancy__hh-link {
     margin: 50px 0 0
   }
 }
 @media only screen and (min-width:768px) and (max-width:1023px) {
+  .vacancy__button-label {
+    bottom: -25px
+  }
   .vacancy__hh-link {
     position: absolute;
     top: 50%;
@@ -1328,6 +1329,9 @@ body {
   }
 }
 @media only screen and (min-device-width:1024px) and (max-device-width:1287px) {
+  .vacancy__button-label {
+    bottom: -25px
+  }
   .vacancy__hh-link {
     position: absolute;
     top: 50%;
@@ -1342,4 +1346,9 @@ body {
   .vacancy__hh-link {
     position: relative
   }
+}
+.vacancy__column-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px
 }
