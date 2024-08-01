@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.page-footer img,
+.page-header img {
+  max-width: 100%!important
+}
 .form__file-loader,
 body {
   font-family: var(--font-family-default)
@@ -104,13 +108,21 @@ body {
   src: url(../fonts/Inter-normal-400.woff2) format("woff2"),url(../fonts/Inter-normal-400.woff) format("woff")
 }
 .page-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   flex-shrink: 0
 }
 .page-content {
   flex-grow: 1
 }
 .page-footer {
-  flex-shrink: 0
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #000
 }
 .career {
   width: 100%;
