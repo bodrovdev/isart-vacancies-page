@@ -39,16 +39,16 @@ const minJs = function () {
 };
 
 // Задача для минификации изображений
-const taskMinImg = require('./tasks/minImg');
-const minImg = function () {
-	return taskMinImg(browserSync);
-};
+// const taskMinImg = require('./tasks/minImg');
+// const minImg = function () {
+// 	return taskMinImg(browserSync);
+// };
 
 // Задача для конвертации изображений в webp
-const taskImgToWebp = require('./tasks/imgToWebp');
-const imgToWebp = function () {
-	return taskImgToWebp(browserSync);
-};
+// const taskImgToWebp = require('./tasks/imgToWebp');
+// const imgToWebp = function () {
+// 	return taskImgToWebp(browserSync);
+// };
 
 // Задача для минификации svg-изображений
 const taskMinSvg = require('./tasks/minSvg');
@@ -105,8 +105,8 @@ exports.build = series(
 	refreshFont,
 	minStyle,
 	minJs,
-	minImg,
-	imgToWebp,
+	// minImg,
+	// imgToWebp,
 	minSvg,
 	svgSprite
 );
